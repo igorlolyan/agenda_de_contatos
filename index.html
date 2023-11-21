@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda de contatos</title>
+    <link rel="shortcut icon" href="/imagens/favicon.png" type="image/x-icon">
+    
+    <!-- css -->
+    <link rel="stylesheet" href="/style.css">
+
+</head>
+<body>
+    <div class="container">
+        <h1>Meu Site Centralizado</h1>
+
+        <form id="formulario">
+            <div class="nomeinput">
+                <label for="nome">Nome:</label>
+                <input type="text" id="formularionome" name="nome" required placeholder="Digite o nome completo">
+            </div>
+
+            <div class="telefone-inputs">
+                <label id="dd">DDD:</label>
+                <input type="number" id="ddd" name="ddd" max="99" pattern="[0-9]{2}" placeholder="Digite o DDD" required>
+        
+                <label for="numero">Número:</label>
+                <input type="text" id="numero" name="numero" pattern="[0-9]{9}" placeholder="Digite o número (com 9 dígitos)" required>
+            </div>
+
+            <button type="submit">Enviar</button>
+        </form>
+
+        <!-- Espaço para adicionar tabelas -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>DDD</th>
+                    <th>Telefone</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+            <!-- Adicione suas tabelas aqui -->
+        </table>
+    </div>
+
+
+    <script src="/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,161 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f8ff; /* Cor de fundo - Azul claro */
+}
+
+
+.container {
+    width: 60%;
+    margin: 50px auto; /* Centraliza o conteúdo e adiciona algum espaço superior */
+    background-color: #d3ffd3; /* Cor de fundo - Verde claro */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+h1 {
+    text-align: center;
+    color: #57996D; /* Cor do título - Verde escuro */
+}
+
+form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    display: flex;
+    margin-bottom: 8px;
+    color: #57996D; /* Cor do texto do rótulo - Verde escuro */
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+
+}
+
+button {
+    background-color: #57996D; /* Cor do botão - Verde escuro */
+    color: #ffffff; /* Cor do texto do botão - Branco */
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    max-width: 15%;
+}
+
+button:hover {
+    background-color: #26663B; /* Cor do botão ao passar o mouse - Verde mais escuro */
+}
+
+input:focus {
+    border: 1px solid #26663B;
+    outline: none;
+}
+
+
+.telefone-inputs {
+    display: flex;
+    justify-content: space-between;
+    width: 100%; /* Garante que os elementos ocupem toda a largura disponível */
+    box-sizing: border-box;
+}
+
+.telefone-inputs input {
+    width: 80%;
+    padding: 8px;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+}
+
+.telefone-inputs label {
+    padding: 8px;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+}
+
+#ddd {
+    width:20% ;
+}
+
+#dd {
+    padding-right: 15px;
+}
+
+.nomeinput {
+    display: flex;
+    justify-content: space-between;
+    width: 100%; /* Garante que os elementos ocupem toda a largura disponível */
+    box-sizing: border-box;
+}
+
+.nomeinput input {
+    padding: 8px;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+}
+
+.nomeinput label {
+    padding: 8px;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+}
+
+
+/* tables */
+
+
+
+
+
+
+/* Estilização básica para a tabela */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+/* Estilo para as células do cabeçalho da tabela */
+th {
+    background-color: #57996D;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    text-align: left;
+    border-radius: 8px;
+
+}
+
+/* Estilo para as células da tabela */
+td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Adicionando cor de fundo intercalada para linhas */
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Estilo para a célula de ação, se aplicável */
+td.action {
+    text-align: center;
+}
+
+/* Estilo para o formulário (se estiver dentro da tabela) */
+form {
+    display: inline-block;
+    margin: 0;
+}
