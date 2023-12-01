@@ -1,43 +1,48 @@
-const form = document.getElementById('formulario')
-let tabelabody = '';
-const dadossalvos = [];
+$(function(){
 
+$('form').on('submit', function(e){
+    e.preventDefault();
 
-form.addEventListener('submit', function(e){
-    e.preventDefault()
-
-
-
-    pegaDados()
-    atualizaTabela()
+    pegaDados();
 })
 
+var nomesSalvos = [];
+var numerosSalvos = [];
+
 function pegaDados(){
-    const nomeusuario = document.getElementById('formularionome')
+    
+    var nome = $('#nome').val()
 
-    const dddusuario = document.getElementById('ddd')
+    var ddd = $('#ddd').val()
 
-    const telefoneusuario = document.getElementById('numero')
+    var numero = $('#numero').val()
 
-    if (dadossalvos.includes(nomeusuario.value) || dadossalvos.includes(dddusuario.value) || dadossalvos.includes(telefoneusuario.value)) {
-        alert('Telefone já cadastrado em outro usuário, digite outro!')
+    if(nomesSalvos.includes(nome) || numerosSalvos.includes(numero)) {
+        alert('Nome ou Telefone já cadastrado meu querido.\nDigite outro 😁😁😁')
     } else {
-        let linha = '<tr>'
-        linha += `<td> ${nomeusuario.value} </td>`
-        dadossalvos.push(nomeusuario.value)
-        linha += `<td> ${dddusuario.value} </td>`
-        linha += `<td> ${telefoneusuario.value} </td>`
-        dadossalvos.push(telefoneusuario.value)
-        linha += '</tr>'
-        tabelabody += linha;
+            nomesSalvos.push(nome);
+            numerosSalvos.push(numero);
+
+            var dados = $(`
+            <tr>
+                <td>
+                    ${nome}
+                </td>
+                <td>
+                    ${ddd}
+                </td>
+                <td>
+                    ${numero}
+                </td>
+            </tr>
+            `)
+        
+            console.log(dados)
+            dados.appendTo($('tbody'))
+
+            $('#nome').val('');
+            $('#numero').val('');
+            $('#ddd').val('');
+        }
     }
-
-
-     // Resetar o formulário
-    form.reset();
-}
-
-function atualizaTabela(){
-    const corpoTabela = document.querySelector('tbody');
-    corpoTabela.innerHTML = tabelabody;
-}
+})
